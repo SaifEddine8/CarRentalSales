@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>حسابي - Car Market</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #e0f7fa, #80deea);
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #00796b;
+      padding: 15px;
+      color: white;
+    }
+
+    nav .container h2 {
+      margin: 0;
+    }
+
+    main .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .dashboard-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .dashboard-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .dashboard-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .dashboard-card h3 {
+      margin: 0;
+      color: #00796b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #004d40;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <h2>Car Market</h2>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h1>مرحباً بك في حسابك!</h1>
+    <p>اختر من الخيارات التالية:</p>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card" onclick="location.href='sell.html'">
+        <img src="https://img.icons8.com/ios-filled/100/00796b/sell.png" alt="بيع">
+        <h3>بيع سيارة</h3>
+      </div>
+
+      <div class="dashboard-card" onclick="location.href='rent.html'">
+        <img src="https://img.icons8.com/ios-filled/100/00796b/rent.png" alt="تأجير">
+        <h3>تأجير سيارة</h3>
+      </div>
+
+      <div class="dashboard-card" onclick="location.href='cars-sale.html'">
+        <img src="https://img.icons8.com/ios-filled/100/00796b/car-sale.png" alt="سيارات للبيع">
+        <h3>عرض سيارات للبيع</h3>
+      </div>
+
+      <div class="dashboard-card" onclick="location.href='cars-rent.html'">
+        <img src="https://img.icons8.com/ios-filled/100/00796b/car-rent.png" alt="سيارات للإيجار">
+        <h3>عرض سيارات للإيجار</h3>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Car Market</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  if(!isLoggedIn()){
+    alert("يجب تسجيل الدخول أولاً");
+    window.location.href = "login.html";
+  } else {
+    updateNavbar();
+  }
+</script>
+
+</body>
+</html>

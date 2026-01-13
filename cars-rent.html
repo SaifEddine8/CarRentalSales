@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>سيارات للإيجار</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <h2>Car Market</h2>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h2>سيارات للإيجار</h2>
+    <div id="cars"></div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Car Market</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  if(!isLoggedIn()){
+    alert("يجب تسجيل الدخول أولاً");
+    window.location.href = "login.html";
+  } else {
+    updateNavbar();
+    displayCars('rent');
+  }
+</script>
+</body>
+</html>

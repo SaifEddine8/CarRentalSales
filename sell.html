@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>بيع سيارة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <h2>Car Market</h2>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h2>إضافة سيارة للبيع</h2>
+    <form onsubmit="addCar(event, 'sale')">
+      <input type="text" placeholder="اسم السيارة" required>
+      <input type="text" placeholder="السعر" required>
+      <input type="url" placeholder="رابط صورة السيارة" required>
+      <input type="tel" placeholder="رقم الهاتف للتواصل" required>
+      <button type="submit">إضافة السيارة</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Car Market</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  if(!isLoggedIn()){
+    alert("يجب تسجيل الدخول أولاً");
+    window.location.href = "login.html";
+  } else {
+    updateNavbar();
+  }
+</script>
+</body>
+</html>
